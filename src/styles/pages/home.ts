@@ -34,7 +34,7 @@ export const Product = styled("a", {
     alignItems: "center",
     justifyContent: "space-between",
     padding: "2rem",
-
+    cursor: "auto",
     backgroundColor: "rgba(0, 0, 0, 0.6)",
 
     transform: "translateY(110%)",
@@ -43,12 +43,19 @@ export const Product = styled("a", {
 
     strong: {
       fontSize: "$lg",
+      color: "$gray100",
     },
 
     span: {
       fontSize: "$xl",
       fontWeight: "bold",
       color: "$green300",
+    },
+
+    div: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 4,
     },
   },
 
@@ -58,4 +65,22 @@ export const Product = styled("a", {
       opacity: 1,
     },
   },
+});
+
+export const BagContainerGreen = styled("button", {
+  zIndex: 1,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  background: "$green500",
+  borderRadius: 6,
+  width: "3.5rem",
+  height: "3.5rem",
+  textDecoration: "none",
+  border: "transparent",
+  cursor: "pointer",
+
+  '&:hover': { 
+    background: '$green300',
+  }
 });
