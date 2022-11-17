@@ -39,8 +39,8 @@ export default function Success({ customerName, products }: SuccessProps) {
         {products.map((product) => (
          
           
-            <ImageContainer>
-              <Image src={product.images[0]} width={120} height={110} />
+            <ImageContainer key={product.images[0]}>
+              <Image src={product.images[0]} width={120} height={110} alt=''/>
             </ImageContainer>
             
           
@@ -74,7 +74,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   });
 
   const customerName = session.customer_details.name;
-  // const product = session.line_items.data[0].price.product as Stripe.Product;
+
 
   const line = session.line_items.data.map((item) => {
     return item.price.product as Stripe.Product;

@@ -21,7 +21,7 @@ export function Tshirt() {
        
         <TshirtContainer key={entry.id}>
         <ImageContainer>
-          <Image src={camiseta1} width={90} height={95} />
+          <Image src={camiseta1} width={90} height={95} alt='' />
         </ImageContainer>
         <ProductInfoContainer>
           <span>{entry.name}</span>
