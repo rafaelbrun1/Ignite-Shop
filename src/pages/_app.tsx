@@ -26,7 +26,7 @@ globalStyles();
 
 const stripeKey = process.env.STRIPE_PUBLIC_KEY;
 
-export interface HandleProps { 
+export interface HandleProps {
   handleCartBoolean: () => void;
 }
 
@@ -41,9 +41,11 @@ export default function App({ Component, pageProps }: AppProps) {
       <Container>
         <Header>
           <Link href="/">
+            <a>
             <Image src={logoImg} alt="" />
+            </a>
           </Link>
-         <Bag handleCartBoolean={handleCart}/>
+          <Bag handleCartBoolean={handleCart} />
         </Header>
         {showCartShopping ? (
           <Sidebar>
@@ -52,16 +54,14 @@ export default function App({ Component, pageProps }: AppProps) {
             </ButtonX>
             <h1> Sacola de compras</h1>
             <TshirtC>
-            <Tshirt />
+              <Tshirt />
             </TshirtC>
             <CartInfo>
               <QntityandTotal />
               <Buy />
             </CartInfo>
-
-           
           </Sidebar>
-        ) : null}
+        ) : null} 
         <Component {...pageProps} />
       </Container>
     </CartProvider>

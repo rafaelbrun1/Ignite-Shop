@@ -25,7 +25,6 @@ interface ProductProps {
 
 export default function Product({ product }: ProductProps) {
   const { addItem, cartDetails } = useShoppingCart();
-  console.log(cartDetails)
 
   if (product) {
     return (
